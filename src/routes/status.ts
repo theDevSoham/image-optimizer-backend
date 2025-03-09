@@ -1,7 +1,8 @@
 import { Router } from "express";
+import { checkStatus } from "../controllers/statusController";
 
 const router = Router();
 
-router.post("/status/:requestId");
+router.get("/status/:requestId", checkStatus);
 
 export default router;
